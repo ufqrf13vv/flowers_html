@@ -1,0 +1,83 @@
+html {
+	box-sizing: border-box;
+	height: 100%;
+}
+
+*, 
+*::before, 
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	height: 100%;
+	font-family: @candara;
+	font-size: 14px;
+	background: url(../img/background.jpg);
+	background-size: cover;
+	line-height: 18px;
+	overflow-x: hidden;
+}
+
+img {
+	display: block;
+}
+
+.container {
+	margin: 0 auto;
+
+	overflow: hidden;
+
+	@media @extrasmall {
+		width: @xs;
+	}
+
+	@media @small {
+		width: @sm;
+	}
+
+	@media @medium {
+		width: @md;
+	}
+
+	@media @large {
+		width: @lg;
+	}
+}
+
+input:focus,
+button:focus {
+	outline: none;
+}
+
+h1 {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: @h1;
+	padding: 0 40px;
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: url('../img/header_flower.png') no-repeat 0 0;
+		position: absolute;
+		top: -6px;
+		left: 0;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		width: 30px;
+		height: 30px;
+		background: url('../img/header_flower.png') no-repeat 0 0;
+		position: absolute;
+		top: -6px;
+		right: 0;
+	}
+}
