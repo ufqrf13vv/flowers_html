@@ -1,6 +1,57 @@
 .content {
-	
+	padding-bottom: 10px;
+
 	&__main-header {
 		text-align: center;
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link {
+		display: block;
+		padding: 12px;
+		background: #fff;
+		border-radius: 7px;
+		box-shadow: 0px 2px 2px 0px #bfbebf;
+		text-decoration: none;
+		font-weight: bold;
+		color: @green;
+
+		&:hover {
+			color: #fff;
+			background: @green;
+		}
+	}
+
+	&__video-wrapper {
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 60px;
+	}
+
+	&__video {
+		width: 440px;
+		height: 255px;
+		background: url('../img/video.jpg') no-repeat 0 0;
+	}
+
+	&__block {
+		display: flex;
+		margin-bottom: 48px;
+
+		&--banner {
+			padding: 0 50px;
+		}
+	}
+
+	&__img--right {
+		margin-left: 35px;
+	}
+
+	&__img--left {
+		margin-right: 35px;
 	}
 }

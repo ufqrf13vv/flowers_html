@@ -1,0 +1,77 @@
+.main-categories {
+	padding-top: 25px;
+	padding-bottom: 50px;
+	
+	&__header {
+		font-family: @lobster;
+		font-size: 24px;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 10px 0;
+		margin-bottom: 20px;
+		color: #3a54b5;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__row {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+	    align-items: center;
+	    text-decoration: none;
+		width: 250px;
+
+		&:hover .main-categories__img {
+			opacity: 0.7;
+		}
+	}
+
+	&__img {
+		display: flex;
+		align-items: center;
+		height: 190px;
+	}
+
+	&__title {
+		height: 25px;
+		font-family: @candaraB;
+		font-size: 15px;
+		text-transform: uppercase;
+		color: #000;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 30px;
+			height: 30px;
+			position: absolute;
+		    top: -5px;
+    		left: -40px;
+		}
+
+		&--flower::before {
+			background: url('../img/categ_icons.png') no-repeat 0 0;
+		}
+
+		&--baloon::before {
+			background: url('../img/categ_icons.png') no-repeat 0 -40px;
+		}
+
+		&--toy::before {
+			background: url('../img/categ_icons.png') no-repeat 0 -74px;
+		}
+	}
+}

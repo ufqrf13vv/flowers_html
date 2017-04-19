@@ -1,0 +1,35 @@
+.pagination {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	justify-content: center;
+
+	&__item .fa-chevron-left,
+	&__item .fa-chevron-right {
+		text-decoration: none;
+		color: #3a54b5;
+		padding-top: 8px;
+		padding: 7px 10px;
+	}
+
+	&__item:hover a {
+		background: #3a54b5;
+		color: #fff;
+		border-radius: 5px;
+	}
+
+	&__item:hover .fa {
+		color: #fff;
+		background: transparent;
+	}
+
+	&__link {
+		display: block;
+		text-decoration: none;
+		font-family: @pnb;
+		font-size: 14px;
+		color: #000;
+		padding: 7px 10px;
+	}
+}

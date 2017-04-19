@@ -1,0 +1,142 @@
+.main-slider {
+
+	&__slide {
+		height: 335px;
+		background-size: contain;
+
+		&--blue {
+			background: url('../img/leaves.png') no-repeat 40% 0, rgba(194, 219, 231, 0.8);
+		}
+
+		&--pink {
+			background: url('../img/leaves.png') no-repeat 40% 0, #f6a8e1;
+
+			& .main-slider__link {
+				border-color: #ac008a;
+			}
+		}
+
+		&--yellow {
+			background: url('../img/leaves-yellow.png') no-repeat 40% 0, rgba(242, 248, 172, 1);
+
+			& .main-slider__description {
+				color: #f59e03;
+			}
+
+			& .main-slider__link {
+				border-color: #f59e03;
+			}
+		}
+	}
+
+	&__img {
+		padding: 30px 100px 0 120px;
+		margin-right: 50px;
+		background: radial-gradient(at center, #fff 20%, transparent 70%);
+	}
+
+	&__wrapper {
+		display: flex;
+	}
+
+	&__description {
+		width: 250px;
+		color: #fff;
+		margin-top: 95px;
+	}
+
+	&__header {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: center;
+		margin-bottom: 20px;
+		position: relative;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 53px;
+			height: 56px;
+			background: url('../img/30.png') no-repeat 0 0;
+			position: absolute;
+			right: 30px;
+			top: -40px;
+		}
+	}
+
+	&__price {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 24px;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__link {
+		display: block;
+		font-weight: bold;
+		font-size: 11px;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 7px 18px;
+		border: 2px solid @dblue;
+		border-radius: 7px;
+		color: #000;
+
+		&:hover {
+			border-color: #fff;
+		}
+	}
+
+	& .slick-arrow {
+	    font-size: 45px;
+	    font-weight: bold;
+	    border: none;
+	    background: transparent;
+	    color: white;
+	    position: absolute;
+	    z-index: 10;
+	    top: 50%;
+	    margin-top: -30px;
+	    cursor: pointer;
+	}
+
+	& .slick-prev {
+	    left: 20px;
+	}
+
+	& .slick-next {
+	    right: 20px;
+	}
+
+	& .slick-dots {
+		display: flex;
+    	list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    justify-content: center;
+	    position: absolute;
+	    width: 100%;
+	    bottom: 10px;
+
+	    & li {
+	    	margin-right: 4px;
+	    }
+
+	    & button {
+	    	border: none;
+	    	border-radius: 50%;
+	    	background: #fff;
+	    	width: 8px;
+	    	height: 8px;
+	    	display: block;
+	    	font-size: 0;
+	    }
+	}
+}

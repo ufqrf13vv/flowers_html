@@ -45,6 +45,15 @@ img {
 	}
 }
 
+.wrapper {
+	margin: 0 auto;
+	padding: 0 20px;
+
+	@media @large {
+		width: 1020px;
+	}
+}
+
 input:focus,
 button:focus {
 	outline: none;
@@ -80,4 +89,27 @@ h1 {
 		top: -6px;
 		right: 0;
 	}
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 34px;
+}
+
+.header-2--blue {
+	text-align: center;
+	color: #1c4189;
+}
+
+.header-2--lightblue {
+	display: inline-block;
+	color: #55a8d4;
+	line-height: 30px;
+	border-bottom: 1px solid #ccdff1;
+}
+
+.header-2--center {
+	text-align: center;
 }

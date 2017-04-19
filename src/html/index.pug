@@ -6,67 +6,135 @@ html
 		title Flowers Shop
 		link(rel='stylesheet', href='css/normalize.css')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+		link(rel='stylesheet', href='slick/slick.css')
 		link(rel='stylesheet', href='css/style.css')
 
-		//- script(src="script/jquery-2.2.0.js", type="text/javascript")
-		//- script(src="script/scripts.js", type="text/javascript")
+		script(src="js/jquery-2.2.0.js", type="text/javascript")
+		script(src="slick/slick.min.js", type="text/javascript")
+		script(src="js/scripts.js", type="text/javascript")
 
 	body
-		.container
-			header.header
-				a.logo(href="/")
-					img(src="img/header_logo.png")
+		include includes/header
 
-				ul.header-menu
-					li.header-menu__item
-						a.header-menu__link(href="#") Отзывы
-					li.header-menu__item
-						a.header-menu__link(href="#") Доставка и оплата
-					li.header-menu__item
-						a.header-menu__link(href="#") Ответы на вопросы
-					li.header-menu__item
-						a.header-menu__link(href="#") О компании
-					li.header-menu__item
-						a.header-menu__link(href="#") Наши магазины
+		.main-slider
+			.main-slider__slide.main-slider__slide--blue
+				.container
+					.main-slider__wrapper
+						.main-slider__img
+							img(src="../img/bouquet-1.png")
+						.main-slider__description
+							.main-slider__header БУКЕТ<br> «СНЕЖНАЯ КОРОЛЕВА»
+							.main-slider__price 3400 РУБ.
+							.main-slider__links
+								a.main-slider__link(href="#") В корзину
+								a.main-slider__link(href="#") Купить в 1 клик
+			.main-slider__slide.main-slider__slide--pink
+				.container
+					.main-slider__wrapper
+						.main-slider__img
+							img(src="../img/bouquet-2.png")
+						.main-slider__description
+							.main-slider__header БУКЕТ<br> «СНЕЖНАЯ КОРОЛЕВА»
+							.main-slider__price 3400 РУБ.
+							.main-slider__links
+								a.main-slider__link(href="#") В корзину
+								a.main-slider__link(href="#") Купить в 1 клик					
+			.main-slider__slide.main-slider__slide--yellow
+				.container
+					.main-slider__wrapper
+						.main-slider__img
+							img(src="../img/bouquet-3.png")
+						.main-slider__description
+							.main-slider__header БУКЕТ<br> «СНЕЖНАЯ КОРОЛЕВА»
+							.main-slider__price 3400 РУБ.
+							.main-slider__links
+								a.main-slider__link(href="#") В корзину
+								a.main-slider__link(href="#") Купить в 1 клик
 
-				form.search
-					input.search__input(type="text")
-					input.search__submit(type="submit")
-
-				.cart
-					.cart__img
-					span.cart__total 1500 РУБ.
-
-				ul.cards
-					li.cards__item.cards__item--maestro
-					li.cards__item.cards__item--visa
-
-				ul.contacts
-					li.contacts__item +7 (812) 930 65 20
-					li.contacts__item +7 (812) 930 65 20
-
-		.submenu
+		.main-categories
 			.container
-				ul.submenu__list
-					li.submenu__item
-						a.submenu__link(href="#") Цветы
-					li.submenu__item
-						a.submenu__link(href="#") Букеты
-					li.submenu__item
-						a.submenu__link(href="#") Комнатные растения
-					li.submenu__item
-						a.submenu__link(href="#") Свадебное оформление
-					li.submenu__item
-						a.submenu__link(href="#") Шары
-					li.submenu__item
-						a.submenu__link(href="#") Игрушки и сувениры
-					li.submenu__item
-						a.submenu__link(href="#") Сопутствующие товары
-					li.submenu__item
-						a.submenu__link(href="#") Опт
+				.main-categories__header Ассортимент
+				.main-categories__wrapper
+					.main-categories__row
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/flowers.png")
+							.main-categories__title.main-categories__title--flower Цветы
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/buqouete.png")
+							.main-categories__title.main-categories__title--flower Букеты
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/room.png")
+							.main-categories__title.main-categories__title--flower Комнатные растения
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/baloons.png")
+							.main-categories__title.main-categories__title--baloon Шары
+					.main-categories__row
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/pigeons.png")
+							.main-categories__title.main-categories__title--flower Свадебное оформление
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/toys.png")
+							.main-categories__title.main-categories__title--toy Игрушки и сувениры
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/else.png")
+							.main-categories__title.main-categories__title--flower Сопутствующие товары
+						a.main-categories__item(href="#")
+							.main-categories__img
+								img(src="../img/catalog/opt.png")
+							.main-categories__title.main-categories__title--baloon Опт
 
 		.container
-			main.content
-				.content__main-header
-					h1 Элитные цветы с доставкой в Санкт-Петербурге
-				p Бутик цветов Newflora в Санкт-Петербурге претендует на звание единственного по-настоящему элитного цветочного заведения в Санкт-Петербурге. Компания предлагает доставку цветов в костюмах, массу необычных цветов и высокий уровень обслуживания. Если вы искали цветы VIP уровня или цветочный бутик ВИП класса, то это Newflora - приезжайте к нам, чтобы в этом убедиться! У нас вряд ли возможно купить цветы дешево. Скорее, у нас возможно купить цветы дорого, получив красивый и комфортный сервис. Компания Newflora занимается элитными цветами, дорогими сортами роз, цветочным эксклюзивом и классической флористикой.
+			.feedbacks__slider
+				.feedbacks__item
+					.feedbacks__header
+						.feedbacks__image
+							img(src="../img/feedback.jpg")
+						.feedbacks__header-wrap
+							.feedbacks__title Анастасия Смольная
+							.feedbacks__subtitle директор вет. лабаратории
+					.feedbacks__text Мы довольны работой, все очень аккуратно, качественно и быстро. Спасибо большое!
+						span.feedbacks__date 01.01.2017
+						a.feedbacks__readmore(href="#") Читать далее
+				.feedbacks__item
+					.feedbacks__header
+						.feedbacks__image
+							img(src="../img/feedback.jpg")
+						.feedbacks__header-wrap
+							.feedbacks__title Анастасия Смольная
+							.feedbacks__subtitle директор вет. лабаратории
+					.feedbacks__text Мы довольны работой, все очень аккуратно, качественно и быстро. Спасибо большое!
+						span.feedbacks__date 01.01.2017
+						a.feedbacks__readmore(href="#") Читать далее
+				.feedbacks__item
+					.feedbacks__header
+						.feedbacks__image
+							img(src="../img/feedback.jpg")
+						.feedbacks__header-wrap
+							.feedbacks__title Анастасия Смольная
+							.feedbacks__subtitle директор вет. лабаратории
+					.feedbacks__text Мы довольны работой, все очень аккуратно, качественно и быстро. Спасибо большое!
+						span.feedbacks__date 01.01.2017
+						a.feedbacks__readmore(href="#") Читать далее
+				.feedbacks__item
+					.feedbacks__header
+						.feedbacks__image
+							img(src="../img/feedback.jpg")
+						.feedbacks__header-wrap
+							.feedbacks__title Анастасия Смольная
+							.feedbacks__subtitle директор вет. лабаратории
+					.feedbacks__text Мы довольны работой, все очень аккуратно, качественно и быстро. Спасибо большое!
+						span.feedbacks__date 01.01.2017
+						a.feedbacks__readmore(href="#") Читать далее
+
+		include includes/footer
+
+
+
+
