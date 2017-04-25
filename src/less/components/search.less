@@ -2,6 +2,18 @@
 	position: relative;
 	padding-top: 10px;
 
+	@media @large {
+		margin-right: 0;
+	}
+
+	@media @medium {
+		margin-right: 20px;
+	}
+
+	@media @small {
+		margin-right: 20px;
+	}
+
 	&__input {
 		height: 32px;
 		width: 96px;
@@ -9,6 +21,10 @@
 		border-radius: 7px;
 		background: transparent;
 		padding-left: 30px;
+
+		@media @extrasmall {
+			width: auto;
+		}
 	}
 
 	&__submit {

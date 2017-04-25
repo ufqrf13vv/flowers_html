@@ -5,12 +5,28 @@
 	list-style: none;
 	justify-content: center;
 
+	&--feedback {
+
+		& .pagination__item .fa-chevron-left,
+		& .pagination__item .fa-chevron-right {
+			color: #fff;
+		}
+
+		& .pagination__item:hover a {
+			background: #2aa858;
+		}
+
+		& .pagination__item:hover .fa {
+			color: #2aa858;
+			background: transparent;
+		}
+	}
+
 	&__item .fa-chevron-left,
 	&__item .fa-chevron-right {
 		text-decoration: none;
 		color: #3a54b5;
-		padding-top: 8px;
-		padding: 7px 10px;
+		padding: 9px 10px;
 	}
 
 	&__item:hover a {
@@ -29,7 +45,8 @@
 		text-decoration: none;
 		font-family: @pnb;
 		font-size: 14px;
-		color: #000;
+		font-weight: bold;
+		color: #434446;
 		padding: 7px 10px;
 	}
 }

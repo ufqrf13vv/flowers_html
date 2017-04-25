@@ -1,8 +1,38 @@
 .header {
-	display: flex;
-	justify-content: space-between;
-	
-	padding: 8px 0;
+	position: relative;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 81px;
+		height: 110px;
+		background: url('../img/chamomile_header.png') no-repeat 0 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 8px 0;
+
+		@media @large {
+			justify-content: space-between;
+		}
+
+		@media @medium {
+			justify-content: flex-end;
+		}
+
+		@media @small {
+			justify-content: center;
+		}
+
+		@media @extrasmall {
+			justify-content: space-around;
+		}
+	}
 
 	&-menu {
 		display: flex;
@@ -10,20 +40,76 @@
 		padding-top: 10px;
 		margin: 0;
 		list-style: none;
+		z-index: 10;
+
+		@media @large {
+			width: auto;
+		}
+
+		@media @medium {
+			justify-content: space-between;
+			width: 80%;
+		}
+
+		@media @small {
+			justify-content: space-between;
+			width: 75%;
+		}
+
+		@media @extrasmall {
+			flex-direction: column;
+		    align-items: center;
+			width: 100%;
+		}
+
+		&--footer {
+			@media @medium {
+				width: auto;
+			}
+
+			@media @small {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
+			@media @extrasmall {
+				margin-bottom: 20px;
+			}
+		}
 
 		&--footer a {
 			color: #fff;
+
+			@media @large {
+				font-size: 14px;
+			}
+
+			@media @medium {
+				font-size: 12px;
+			}
 		}
 
 		&__link {
 			display: block;
-			font-size: 11px;
 			font-weight: bold;
 			text-transform: uppercase;
 			text-decoration: none;
 			color: @dblue;
 			border: 2px solid transparent;
 			padding: 5px 13px;
+
+			@media @large {
+				font-size: 11px;
+			}
+
+			@media @medium {
+				font-size: 14px;
+			}
+
+			@media @small {
+				font-size: 12px;
+				padding: 4px;
+			}
 		}
 
 		&__item:hover a {

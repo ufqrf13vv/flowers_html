@@ -1,0 +1,174 @@
+.product {
+	display: flex;
+	background: rgba(194, 219, 231, 0.5);
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 30px;
+		height: 30px;
+		background: url('../img/red-flower.png') no-repeat 0 0;
+		position: absolute;
+		bottom: -15px;
+		left: 50%;
+    	margin-left: -15px;
+	}
+
+	&__item {
+		display: flex;
+		width: 700px;
+		margin: auto;
+
+		@media @medium {
+			width: 700px;
+		}
+
+		@media @small {
+			width: auto;
+		}
+
+		@media @extrasmall {
+			flex-direction: column;
+			width: auto;
+			padding-bottom: 30px;
+		}
+
+		&-image_block {
+			margin-right: 120px;
+
+			@media @extrasmall {
+				margin-right: 0;
+			}
+		}
+
+		&-image {
+			display: flex;
+			width: 350px;
+			height: 315px;
+
+			@media @extrasmall {
+				width: auto;
+			}
+
+			& > img {
+				margin: auto;
+			}
+		}
+
+		&-description {
+			width: 210px;
+			padding-top: 80px;
+
+			@media @extrasmall {
+				width: auto;
+				padding-top: 0;
+			}
+		}
+
+		&-title {
+			font-weight: bold;
+			font-size: 18px;
+			text-transform: uppercase;
+			text-align: center;
+			color: #a60003;
+			margin-bottom: 25px;
+		}
+
+		&-price {
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+
+			@media @extrasmall {
+				justify-content: space-around;
+			}
+
+			&--buttons {
+				margin-bottom: 45px;
+				justify-content: flex-start;
+
+				@media @extrasmall {
+					justify-content: center;
+				}
+			}
+		}
+
+		&-count {
+			font-weight: bold;
+			margin-right: 10px;
+		}
+
+		&-num {
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			color: #a50003;
+			background: #fff;
+			font-weight: bold;
+			font-size: 16px;
+			margin-right: 10px;
+		}
+
+		&-btn {
+			width: 20px;
+			height: 20px;
+			background: #fff;
+			border: none;
+			box-shadow: 0px 2px 2px 0px rgba(207,216,230,1);
+			position: relative;
+
+			&:not(:last-child) {
+				margin-right: 5px;
+			}
+
+			&_plus::before {
+				content: '';
+				height: 2px;
+				width: 10px;
+				background: #a50003;
+				position: absolute;
+				top: 9px;
+				left: 5px;
+			}
+
+			&_plus::after {
+				content: '';
+				height: 10px;
+				width: 2px;
+				background: #a50003;
+				position: absolute;
+				top: 5px;
+				left: 9px;
+			}
+
+			&_minus::before {
+				content: '';
+				height: 2px;
+				width: 10px;
+				background: #a50003;
+				position: absolute;
+				top: 9px;
+				left: 5px;
+			}
+		}
+
+		&-link {
+			text-decoration: none;
+			color: #000;
+			text-transform: uppercase;
+			padding: 4px 10px;
+			font-size: 12px;
+			border: 2px solid #a50003;
+			border-radius: 5px;
+
+			&:hover {
+				border-color: #fff;
+			}
+		}
+	}
+}

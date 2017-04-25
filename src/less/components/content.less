@@ -1,6 +1,26 @@
 .content {
 	padding-bottom: 10px;
 
+	&--catalog {
+		background: rgba(255, 255, 255 , 0.3);
+		font: 12px;
+	}
+
+	&--main {
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 390px;
+			height: 590px;
+			background: url('../img/chamomile_bg.png') no-repeat 0 0;
+			position: absolute;
+			top: -61px;
+			left: 0;
+		}
+	}
+
 	&__main-header {
 		text-align: center;
 	}
@@ -28,30 +48,83 @@
 
 	&__video-wrapper {
 		display: flex;
-		justify-content: space-around;
 		margin-bottom: 60px;
+
+		@media @medium {
+			justify-content: space-around;
+		}
+
+		@media @small {
+			justify-content: space-between;
+		}
+
+		@media @extrasmall {
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+		}
 	}
 
 	&__video {
 		width: 440px;
 		height: 255px;
 		background: url('../img/video.jpg') no-repeat 0 0;
+
+		@media @small {
+			width: 45%;
+		}
+
+		@media @extrasmall {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
 	}
 
 	&__block {
 		display: flex;
 		margin-bottom: 48px;
 
+		@media @medium {
+			flex-wrap: nowrap;
+		}
+
+		@media @small {
+			flex-wrap: wrap;
+		}
+
+		@media @extrasmall {
+			flex-wrap: wrap;
+		}
+
 		&--banner {
 			padding: 0 50px;
+		}
+
+		&--main {
+			margin-bottom: 0;
+			padding-top: 60px;
+			padding-bottom: 20px;
 		}
 	}
 
 	&__img--right {
-		margin-left: 35px;
+		z-index: 10;
+
+		@media @medium {
+			margin-left: 35px;
+		}
+
+		@media @small {
+			margin-left: 0;
+		}
 	}
 
 	&__img--left {
 		margin-right: 35px;
+		z-index: 10;
+	}
+
+	&__text {
+		z-index: 10;
 	}
 }

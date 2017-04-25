@@ -8,11 +8,161 @@
 	font-size: 19px;
 	color: @dblue;
 
+	z-index: 10;
+
 	&--footer {
 		color: #fff;
+
+		@media @extrasmall {
+			width: 100%;
+			text-align: center;
+			padding: 15px 0;
+		}
 	}
 
 	&__item:not(:last-child) {
 		margin-bottom: 8px;
+	}
+
+	&__wrapper {
+		padding-top: 20px;
+		padding-bottom: 40px;
+	}
+
+	&__title {
+		width: 280px;
+		font-family: @pnb;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 13px 20px;
+		margin-bottom: 10px;
+		background: #fff;
+		box-shadow: 0px 2px 2px 0px rgba(167,178,191,1);
+
+		@media @extrasmall {
+			width: auto;
+		}
+	}
+
+	&__map {
+		box-shadow: 0px 2px 2px 0px rgba(167,178,191,1);
+		margin-bottom: 8px;
+
+		& > img {
+			width: 100%;
+		}
+	}
+
+	&__description {
+		display: flex;
+		justify-content: space-between;
+		padding: 13px 20px;
+		background: #fff;
+
+		@media @small {
+			flex-direction: row;
+		}
+
+		@media @extrasmall {
+			flex-direction: column;
+		}
+	}
+
+	&__list {
+		display: flex;
+		font-family: @pnr;
+		list-style: none;
+		padding-left: 0;
+		margin: 13px 0;
+
+		@media @large {
+			font-size: 20px;
+		}
+
+		@media @medium {
+			font-size: 16px;
+			flex-direction: row;
+		}
+
+		@media @small {
+			font-size: 18px;
+			flex-direction: column;
+		}
+
+		@media @extrasmall {
+			font-size: 17px;
+			flex-direction: column;
+		}
+	}
+
+	&__li {
+		padding-left: 25px;
+		position: relative;
+
+		&:not(:last-child) {
+
+			@media @large {
+				margin-right: 45px;
+			}
+
+			@media @medium {
+				margin-right: 10px;
+				margin-bottom: 0;
+			}
+
+			@media @small {
+				margin-bottom: 15px;
+			}
+
+			@media @extrasmall {
+				margin-bottom: 15px;
+			}
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			left: 0;
+		}
+
+		&--adress::before {
+			background: url('../img/cart_icons.png') no-repeat 0 -95px;
+		}
+
+		&--tel::before {
+			background: url('../img/cart_icons.png') no-repeat 0 -21px;
+		}
+
+		&--email::before {
+			background: url('../img/cart_icons.png') no-repeat 0 -45px;
+		}
+	}
+
+	&__hide {
+		width: 130px;
+		padding: 13px 0;
+		background: transparent;
+		border: none;
+		box-shadow: 0px 2px 2px 0px rgba(167,178,191,1);
+		font-family: @pnb;
+		font-size: 20px;
+		font-weight: bold;
+		cursor: pointer;
+
+		@media @small {
+			align-self: center;
+		}
+
+		@media @extrasmall {
+			align-self: center;
+		}
+	}
+
+	&__arrow {
+		margin-left: 10px;
+		color: #1da34c;
 	}
 }

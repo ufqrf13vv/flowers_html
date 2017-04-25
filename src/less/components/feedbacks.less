@@ -1,7 +1,25 @@
 .feedbacks {
+	background: rgba(194, 219, 231, 0.5);
+	padding-top: 20px;
+	padding-bottom: 25px;
+
+	&__wrapper {
+		display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-around;
+
+	    @media @large {
+	    	padding: 0 80px;
+	    }
+	}
 
 	&__slider {
 		display: flex;
+	}
+
+	&__main-header {
+		color: #1a3f88;
+		padding: 20px 0;
 	}
 
 	&__header {
@@ -10,11 +28,81 @@
 	}
 
 	&__item {
-		width: 295px;
-		height: 200px;
 		font-size: 11px;
-		padding: 50px 30px 0 25px;
 		background: url('../img/cloud.png') no-repeat 0 0;
+		background-size: contain;
+
+		@media @large {
+			height: 200px;
+		}
+
+		@media @medium {
+			height: 220px;
+			padding: 50px 30px 0 25px;
+		}
+
+		@media @small {
+			height: 220px;
+			padding: 50px 70px 0 25px;
+		}
+
+		@media @extrasmall {
+			height: 220px;
+		}
+
+		&--main {
+			width: 410px;
+			background: url('../img/cloud-main.png') no-repeat 0 0;
+			margin-bottom: 20px;
+
+			@media @large {
+				height: 275px;
+				padding: 80px 65px 0 35px;
+			}
+
+			@media @medium {
+				height: 275px;
+				padding: 80px 65px 0 35px;
+			}
+
+			@media @small {
+				height: 275px;
+				padding: 80px 65px 0 35px;
+			}
+
+			@media @extrasmall {
+				width: auto;
+				background-size: contain;
+				padding: 50px 65px 0 25px;
+			}
+
+			& .feedbacks__image {
+				width: 65px;
+				height: 65px;
+			}
+
+			& .feedbacks__title {
+				font-size: 14px;
+			}
+
+			& .feedbacks__subtitle {
+				font-size: 12px;
+			}
+
+			& .feedbacks__text {
+				font-weight: normal;
+				padding-left: 30px;
+				font-size: 14px;
+			}
+
+			& .feedbacks__date {
+				margin-top: 10px;
+
+				@media @extrasmall {
+					margin-top: 0;
+				}
+			}
+		}
 	}
 
 	&__title {
@@ -59,5 +147,26 @@
 		margin-top: -5px;
 		text-decoration: none;
 		border-bottom: 1px solid #deeef8;
+	}
+
+	&__form {
+		padding: 30px 0;
+
+		&-header {
+			line-height: 30px;
+			color: #1a3f88;
+			margin-bottom: 25px;
+		}
+
+		&-wrapper {
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+			width: 620px;
+
+			@media @extrasmall {
+				width: auto;
+			}
+		}
 	}
 }

@@ -55,8 +55,43 @@ img {
 }
 
 input:focus,
-button:focus {
+button:focus,
+textarea:focus {
 	outline: none;
+}
+
+.label {
+	font-family: @pnsb;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #1a3f88;
+	z-index: 10;
+}
+
+input,
+textarea {
+	padding: 11px 8px;
+	border: 1px solid #e6e6e6;
+	border-radius: 5px;
+	z-index: 10;
+}
+
+textarea {
+	height: 120px;
+	resize: none;
+	margin-bottom: 28px;
+}
+
+.input__submit {
+	align-self: center;
+	border: none;
+	border-radius: 5px;
+	background: #1da34c;
+	color: #fff;
+	padding: 15px;
+	cursor: pointer;
+	z-index: 10;
 }
 
 h1 {
@@ -68,17 +103,11 @@ h1 {
 	padding: 0 40px;
 	position: relative;
 
-	&::before {
-		content: '';
-		display: block;
-		width: 30px;
-		height: 30px;
-		background: url('../img/header_flower.png') no-repeat 0 0;
-		position: absolute;
-		top: -6px;
-		left: 0;
+	@media @extrasmall {
+		line-height: 24px;
 	}
 
+	&::before,
 	&::after {
 		content: '';
 		display: block;
@@ -87,6 +116,18 @@ h1 {
 		background: url('../img/header_flower.png') no-repeat 0 0;
 		position: absolute;
 		top: -6px;
+
+		@media @extrasmall {
+			top: 50%;
+			margin-top: -15px;
+		}
+	}
+
+	&::before {
+		left: 0;
+	}
+
+	&::after {
 		right: 0;
 	}
 }
@@ -112,4 +153,15 @@ h2 {
 
 .header-2--center {
 	text-align: center;
+}
+
+h3 {
+	font-family: @lobster;
+	font-size: 24px;
+	font-weight: normal;
+
+	text-align: center;
+	text-transform: uppercase;
+
+	margin: 0;
 }

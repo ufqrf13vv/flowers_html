@@ -5,6 +5,7 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 	}
 
 	&__block {
@@ -13,5 +14,20 @@
 		text-align: center;
 		text-transform: uppercase;
 		color: #fff;
+
+		@media @medium {
+			order: 0;
+			width: auto;
+		}
+
+		@media @small {
+			order: 2;
+			width: 100%;
+		}
+
+		@media @extrasmall {
+			order: 2;
+			width: 100%;
+		}
 	}
 }

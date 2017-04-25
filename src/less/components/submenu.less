@@ -14,16 +14,27 @@
 
 	&__link {
 		display: block;
-
-		font-size: 12px;
 		font-weight: bold;
 
 		text-transform: uppercase;
 		text-decoration: none;
 		
-		padding: 8px 18px;
 		border: 2px solid transparent;
 		color: #fff;
+
+		@media @large {
+			padding: 8px 18px;	
+		}
+
+		@media @medium {
+			font-size: 12px;
+			padding: 8px 15px;
+		}
+
+		@media @small {
+			font-size: 11px;
+			padding: 5px;
+		}
 	}
 
 	&__item:hover a {

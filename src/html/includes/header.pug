@@ -1,41 +1,42 @@
-.container
-	header.header
-		a.logo(href="/")
-			img(src="img/header_logo.png")
+header.header
+	.container
+		.header__wrapper
+			a.logo(href="/")
+				img(src="img/header_logo.png")
 
-		ul.header-menu
-			li.header-menu__item
-				a.header-menu__link(href="#") Отзывы
-			li.header-menu__item
-				a.header-menu__link(href="#") Доставка и оплата
-			li.header-menu__item
-				a.header-menu__link(href="#") Ответы на вопросы
-			li.header-menu__item
-				a.header-menu__link(href="#") О компании
-			li.header-menu__item
-				a.header-menu__link(href="#") Наши магазины
+			ul.header-menu
+				li.header-menu__item
+					a.header-menu__link(href="feedbacks.html") Отзывы
+				li.header-menu__item
+					a.header-menu__link(href="#") Доставка и оплата
+				li.header-menu__item
+					a.header-menu__link(href="questions.html") Ответы на вопросы
+				li.header-menu__item
+					a.header-menu__link(href="template.html") О компании
+				li.header-menu__item
+					a.header-menu__link(href="contacts.html") Наши магазины
 
-		form.search
-			input.search__input(type="text")
-			input.search__submit(type="submit")
+			form.search
+				input.search__input(type="text")
+				input.search__submit(type="submit")
 
-		.cart
-			.cart__img
-			span.cart__total 1500 РУБ.
+			.cart
+				.cart__img
+				span.cart__total 1500 РУБ.
 
-		ul.cards
-			li.cards__item.cards__item--maestro
-			li.cards__item.cards__item--visa
+			ul.cards
+				li.cards__item.cards__item--maestro
+				li.cards__item.cards__item--visa
 
-		ul.contacts
-			li.contacts__item +7 (812) 930 65 20
-			li.contacts__item +7 (812) 930 65 20
-
+			ul.contacts
+				li.contacts__item +7 (812) 930 65 20
+				li.contacts__item +7 (812) 930 65 20
+				
 .submenu
 	.container
 		ul.submenu__list
 			li.submenu__item
-				a.submenu__link(href="#") Цветы
+				a.submenu__link(href="catalog.html") Цветы
 			li.submenu__item
 				a.submenu__link(href="#") Букеты
 			li.submenu__item
@@ -49,4 +50,4 @@
 			li.submenu__item
 				a.submenu__link(href="#") Сопутствующие товары
 			li.submenu__item
-				a.submenu__link(href="#") Опт
+				a.submenu__link(href="cart.html") Опт
